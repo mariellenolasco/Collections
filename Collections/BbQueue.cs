@@ -27,7 +27,7 @@ namespace Collections
         public T Dequeue()
         {
             Node<T> oldFront = Rear.Next;
-            if (oldFront == Rear.Next) Rear = null;
+            if (oldFront == oldFront.Next) Rear = null;
             else
             {
                 Rear.Next = oldFront.Next;
